@@ -14,7 +14,7 @@ FILENAME=$1
 # Format:
 # "  PATH: v5.10..v5.99.99" ->output-> "v5.10"
 TAGFILE=$2
-if [ "x$TAGFILE"=="x" ] ; then
+if [ "x$TAGFILE" == "x" ] ; then
     echo "Need to supply a kernel tag list filename as param0 in format:"
     echo "  PATCH: v5.10..v5.99.99"
     exit -1
@@ -39,7 +39,7 @@ do
         git show $vers:$FILENAME >/dev/null
         ERR=$?
         if [ $ERR -eq 128 ] ; then
-    		echo "#ERROR: File is missing"
+    		echo "#ERROR: File is missing for $vers"
             continue
         fi
 
