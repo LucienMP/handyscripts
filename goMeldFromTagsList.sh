@@ -67,5 +67,7 @@ do
 
     # Display A/B in diff tool like MELD
     meld /tmp/fileA /tmp/fileB
-    exit
+
+    # Swap starting point
+    A=$B
 done
